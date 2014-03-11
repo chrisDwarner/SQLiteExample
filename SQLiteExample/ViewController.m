@@ -75,6 +75,9 @@
         
         // clean up the SQL statement when your done.
         sqlite3_finalize(statement);
+        
+        // close the database pointer.
+        sqlite3_close(database);
     }
 }
 
@@ -100,7 +103,19 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:simpleTableIdentifier];
     }
     
-    cell.textLabel.text = [_tableViewContents objectAtIndex:indexPath.row];
+    Person *contact = (Person *)[_tableViewContents objectAtIndex:indexPath.row];
+    
+    if (contact && [contact isKindOfClass:[Person class]])
+    {
+        cell.textLabel.text = [NSString stringWithFormat:@"%@ %@", contact.firstName, contact.lastName];
+        cell.detailTextLabel.text = contact.phone;
+    }
+    else
+    {
+        // no data in the database, use the old string instead.
+        cell.textLabel.text = [_tableViewContents objectAtIndex:indexPath.row];
+        
+    }
     cell.accessoryType = UITableViewCellAccessoryDetailDisclosureButton;
     return cell;
 }
