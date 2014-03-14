@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "SQLiteObject.h"
+#import "SQLiteManager.h"
 #import "Person.h"
 #include "sqlite3.h"
 
@@ -33,9 +34,9 @@
     // will only see one record.
     _tableViewContents = [NSArray arrayWithObjects:@"item", nil];
     
-    NSString *databasePath = [SQLiteObject databasePath];
-    
-    if ( sqlite3_open([databasePath UTF8String], &database) == SQLITE_OK)
+    database = [SQLiteManager newConnection];
+
+    if ( database )
     {
         // now we have opened the database, retrieve some records.
         sqlite3_stmt *statement = NULL;
@@ -72,12 +73,11 @@
             // store the results for viewing in the tableview.
             _tableViewContents = results;
         }
-        
         // clean up the SQL statement when your done.
         sqlite3_finalize(statement);
+        statement = NULL;
         
-        // close the database pointer.
-        sqlite3_close(database);
+        [SQLiteManager closeConnection:database];
     }
 }
 

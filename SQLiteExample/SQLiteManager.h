@@ -14,5 +14,7 @@
 
 +(void) initializeDatabase;
 +(NSString *) databasePath;
++(sqlite3 *) newConnection;
 +(sqlite3 *) newConnectionFromFilename:(NSString *)databaseFilePath;
++(void) closeConnection:(sqlite3 *)database;
 @end
