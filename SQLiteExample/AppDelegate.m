@@ -7,12 +7,17 @@
 //
 
 #import "AppDelegate.h"
+#import "SQLiteManager.h"
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    
+    // When the application launches on the first run, we
+    // will check to see if the database has been installed.
+    [SQLiteManager initializeDatabase];
     return YES;
 }
 							

@@ -10,6 +10,8 @@
 		833ECE1C18CF753C008A7B6D /* SQLiteObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 833ECE1B18CF753C008A7B6D /* SQLiteObject.m */; };
 		833ECE2818CF7C25008A7B6D /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 833ECE2718CF7C25008A7B6D /* Person.m */; };
 		833ECE2918CF815A008A7B6D /* libSqLite3.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 833ECE2318CF7607008A7B6D /* libSqLite3.a */; };
+		83622EB618D372BD00320DE2 /* SQLiteManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 83622EB518D372BD00320DE2 /* SQLiteManager.m */; };
+		83622EB818D3782100320DE2 /* database.sql in Resources */ = {isa = PBXBuildFile; fileRef = 83622EB718D3782100320DE2 /* database.sql */; };
 		83E4A45718C6915D00C6443A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83E4A45618C6915D00C6443A /* Foundation.framework */; };
 		83E4A45918C6915D00C6443A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83E4A45818C6915D00C6443A /* CoreGraphics.framework */; };
 		83E4A45B18C6915D00C6443A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83E4A45A18C6915D00C6443A /* UIKit.framework */; };
@@ -57,6 +59,9 @@
 		833ECE1D18CF7606008A7B6D /* SqLite3.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SqLite3.xcodeproj; path = ../SqLite3/SqLite3.xcodeproj; sourceTree = "<group>"; };
 		833ECE2618CF7C25008A7B6D /* Person.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
 		833ECE2718CF7C25008A7B6D /* Person.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
+		83622EB418D372BD00320DE2 /* SQLiteManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQLiteManager.h; sourceTree = "<group>"; };
+		83622EB518D372BD00320DE2 /* SQLiteManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQLiteManager.m; sourceTree = "<group>"; };
+		83622EB718D3782100320DE2 /* database.sql */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = database.sql; sourceTree = "<group>"; };
 		83E4A45318C6915D00C6443A /* SQLiteExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SQLiteExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		83E4A45618C6915D00C6443A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		83E4A45818C6915D00C6443A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -147,6 +152,8 @@
 		83E4A45C18C6915D00C6443A /* SQLiteExample */ = {
 			isa = PBXGroup;
 			children = (
+				83622EB418D372BD00320DE2 /* SQLiteManager.h */,
+				83622EB518D372BD00320DE2 /* SQLiteManager.m */,
 				833ECE2618CF7C25008A7B6D /* Person.h */,
 				833ECE2718CF7C25008A7B6D /* Person.m */,
 				833ECE1A18CF753C008A7B6D /* SQLiteObject.h */,
@@ -166,6 +173,7 @@
 		83E4A45D18C6915D00C6443A /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				83622EB718D3782100320DE2 /* database.sql */,
 				83E4A45E18C6915D00C6443A /* SQLiteExample-Info.plist */,
 				83E4A45F18C6915D00C6443A /* InfoPlist.strings */,
 				83E4A46218C6915D00C6443A /* main.m */,
@@ -291,6 +299,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				83622EB818D3782100320DE2 /* database.sql in Resources */,
 				83E4A46D18C6915D00C6443A /* Main_iPad.storyboard in Resources */,
 				83E4A47218C6915D00C6443A /* Images.xcassets in Resources */,
 				83E4A46A18C6915D00C6443A /* Main_iPhone.storyboard in Resources */,
@@ -318,6 +327,7 @@
 				833ECE2818CF7C25008A7B6D /* Person.m in Sources */,
 				83E4A46318C6915D00C6443A /* main.m in Sources */,
 				833ECE1C18CF753C008A7B6D /* SQLiteObject.m in Sources */,
+				83622EB618D372BD00320DE2 /* SQLiteManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -452,6 +462,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SQLiteExample/SQLiteExample-Prefix.pch";
 				INFOPLIST_FILE = "SQLiteExample/SQLiteExample-Info.plist";
@@ -465,6 +476,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SQLiteExample/SQLiteExample-Prefix.pch";
 				INFOPLIST_FILE = "SQLiteExample/SQLiteExample-Info.plist";
