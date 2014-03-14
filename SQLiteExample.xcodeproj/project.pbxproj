@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		833ECE1C18CF753C008A7B6D /* SqliteObj.m in Sources */ = {isa = PBXBuildFile; fileRef = 833ECE1B18CF753C008A7B6D /* SqliteObj.m */; };
+		833ECE1C18CF753C008A7B6D /* SQLiteObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 833ECE1B18CF753C008A7B6D /* SQLiteObject.m */; };
 		833ECE2818CF7C25008A7B6D /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 833ECE2718CF7C25008A7B6D /* Person.m */; };
 		833ECE2918CF815A008A7B6D /* libSqLite3.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 833ECE2318CF7607008A7B6D /* libSqLite3.a */; };
 		83E4A45718C6915D00C6443A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83E4A45618C6915D00C6443A /* Foundation.framework */; };
@@ -52,8 +52,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		833ECE1A18CF753C008A7B6D /* SqliteObj.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SqliteObj.h; sourceTree = "<group>"; };
-		833ECE1B18CF753C008A7B6D /* SqliteObj.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SqliteObj.m; sourceTree = "<group>"; };
+		833ECE1A18CF753C008A7B6D /* SQLiteObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQLiteObject.h; sourceTree = "<group>"; };
+		833ECE1B18CF753C008A7B6D /* SQLiteObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQLiteObject.m; sourceTree = "<group>"; };
 		833ECE1D18CF7606008A7B6D /* SqLite3.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SqLite3.xcodeproj; path = ../SqLite3/SqLite3.xcodeproj; sourceTree = "<group>"; };
 		833ECE2618CF7C25008A7B6D /* Person.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
 		833ECE2718CF7C25008A7B6D /* Person.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
@@ -149,8 +149,8 @@
 			children = (
 				833ECE2618CF7C25008A7B6D /* Person.h */,
 				833ECE2718CF7C25008A7B6D /* Person.m */,
-				833ECE1A18CF753C008A7B6D /* SqliteObj.h */,
-				833ECE1B18CF753C008A7B6D /* SqliteObj.m */,
+				833ECE1A18CF753C008A7B6D /* SQLiteObject.h */,
+				833ECE1B18CF753C008A7B6D /* SQLiteObject.m */,
 				83E4A46518C6915D00C6443A /* AppDelegate.h */,
 				83E4A46618C6915D00C6443A /* AppDelegate.m */,
 				83E4A46818C6915D00C6443A /* Main_iPhone.storyboard */,
@@ -317,7 +317,7 @@
 				83E4A46718C6915D00C6443A /* AppDelegate.m in Sources */,
 				833ECE2818CF7C25008A7B6D /* Person.m in Sources */,
 				83E4A46318C6915D00C6443A /* main.m in Sources */,
-				833ECE1C18CF753C008A7B6D /* SqliteObj.m in Sources */,
+				833ECE1C18CF753C008A7B6D /* SQLiteObject.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

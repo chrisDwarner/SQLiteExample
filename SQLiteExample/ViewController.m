@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-#import "SqliteObj.h"
+#import "SQLiteObject.h"
 #import "Person.h"
 #include "sqlite3.h"
 
