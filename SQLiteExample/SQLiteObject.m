@@ -41,22 +41,4 @@
     return (_primaryKey != 0 && _database != NULL);
 }
 
-// opens the database.  If the database has not been created, it is created
-+(sqlite3 *) OpenDatabase
-{
-    return [SQLiteManager newConnection];
-}
-
-+(void) CloseDatabase:(sqlite3 *)database
-{
-    [SQLiteManager closeConnection:database];
-}
-
-// build an absolute path to the database file.
-+(NSString *) databasePath
-{
-    return [SQLiteManager databasePath];
-}
-
-
 @end

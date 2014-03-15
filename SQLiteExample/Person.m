@@ -10,7 +10,6 @@
 
 @implementation Person
 
-@synthesize primaryKey;
 @synthesize firstName;
 @synthesize lastName;
 @synthesize phone;

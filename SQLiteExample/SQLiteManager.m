@@ -16,7 +16,7 @@
 +(void) initializeDatabase
 {
     NSFileManager *fileManager = [NSFileManager defaultManager];
-    NSString *path = [SQLiteObject databasePath];
+    NSString *path = [SQLiteManager databasePath];
     
     // if the path does not exist, then we need to initialize the database.
     if ([fileManager fileExistsAtPath:path] == NO)

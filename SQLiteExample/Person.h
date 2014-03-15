@@ -7,10 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "SQLiteObject.h"
 
-@interface Person : NSObject
+// The person object is derived off the SQLiteObject class to allow us to operate
+// on the data retrieved by the database.  This object will be used to track the
+// data while loaded in the tableView.
+@interface Person : SQLiteObject
 
-@property (nonatomic, retain) NSNumber *primaryKey;
 @property (nonatomic, retain) NSString *firstName;
 @property (nonatomic, retain) NSString *lastName;
 @property (nonatomic, retain) NSString *phone;

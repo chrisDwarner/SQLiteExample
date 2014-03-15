@@ -9,7 +9,6 @@
 #import <Foundation/Foundation.h>
 #include "sqlite3.h"
 
-
 @interface SQLiteObject : NSObject {
     sqlite3 *_database;
     NSInteger _primaryKey;
@@ -22,9 +21,5 @@
 -(id) init;
 -(id) initWithPrimaryKey:(NSInteger)pk database:(sqlite3 *)db;
 -(BOOL) isConnected;
-
-+(sqlite3 *) OpenDatabase;
-+(void) CloseDatabase:(sqlite3 *)database;
-+(NSString *) databasePath;
 
 @end

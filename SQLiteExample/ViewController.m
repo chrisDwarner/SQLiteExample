@@ -59,9 +59,8 @@
                 NSString *phone = [NSString stringWithUTF8String:(char *)sqlite3_column_text(statement, 3)];
                 
                 // insert into an object
-                Person *contact = [[Person alloc] init];
+                Person *contact = [[Person alloc] initWithPrimaryKey:primaryKey database:database];
                 if (contact) {
-                    contact.primaryKey = [NSNumber numberWithInt:primaryKey];
                     contact.firstName = firstName;
                     contact.lastName = lastName;
                     contact.phone = phone;
